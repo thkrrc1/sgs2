@@ -1,0 +1,9 @@
+{
+    "library" : "visualizer",
+    "contents" : [
+        {
+    	    "class": "subpanel_plugins::Visualizer",
+		    "base_class": "SubPanelPluginInterface"
+        }
+    ]
+}

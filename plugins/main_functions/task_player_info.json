@@ -1,0 +1,9 @@
+{
+    "library" : "task_player",
+    "contents" : [
+        {
+    	    "class": "task_player::TaskPlayer",
+		    "base_class": "ServerPluginInterface"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "library" : "config_server",
+    "contents" : [
+        {
+    	    "class": "config::server::ConfigServer",
+		    "base_class": "ServerPluginInterface"
+        }
+    ]
+}

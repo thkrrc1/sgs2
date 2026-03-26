@@ -1,0 +1,9 @@
+{
+    "library" : "status_receiver",
+    "contents" : [
+        {
+    	    "class": "status_receiver::StatusReceiver",
+		    "base_class": "DevctrlPluginInterface"
+        }
+    ]
+}

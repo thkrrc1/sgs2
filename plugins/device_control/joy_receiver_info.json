@@ -1,0 +1,9 @@
+{
+    "library" : "joy_receiver",
+    "contents" : [
+        {
+    	    "class": "joy_receiver::JoyReceiver",
+		    "base_class": "DevctrlPluginInterface"
+        }
+    ]
+}

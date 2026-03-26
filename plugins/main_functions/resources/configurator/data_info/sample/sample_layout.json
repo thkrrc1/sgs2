@@ -1,0 +1,60 @@
+{
+    "label": "サンプルタブ",
+    "model": 2,
+    "contents": [
+        {
+            "label": "1行1列",
+            "type": "check",
+            "offset": "0x0000",
+            "byte": 1,
+            "position": {
+                "column": 0
+            }
+        },
+        {
+            "label": "2行1列",
+            "type": "check",
+            "offset": "0x0001",
+            "byte": 1,
+            "position": {
+                "column": 0
+            }
+        },
+        {
+            "label": "1行2列",
+            "type": "check",
+            "offset": "0x0002",
+            "byte": 1,
+            "position": {
+                "column": 1
+            }
+        },
+        {
+            "label": "2行2列",
+            "type": "check",
+            "offset": "0x0003",
+            "byte": 1,
+            "position": {
+                "column": 1
+            }
+        },
+        {
+            "label": "1行3列",
+            "type": "check",
+            "offset": "0x0002",
+            "byte": 1,
+            "position": {
+                "column": 2
+            }
+        },
+        {
+            "label": "2行3列",
+            "type": "check",
+            "offset": "0x0003",
+            "byte": 1,
+            "position": {
+                "column": 2
+            }
+        }
+    ]
+}

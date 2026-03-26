@@ -1,0 +1,9 @@
+{
+    "library" : "waypoint_tool",
+    "contents" : [
+        {
+    	    "class": "waypoint_tool::WaypointTool",
+		    "base_class": "map_editor::MapToolBase"
+        }
+    ]
+}

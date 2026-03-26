@@ -1,0 +1,9 @@
+{  
+    "library" : "status_server",  
+    "contents" : [  
+        {  
+            "class": "status_monitor::StatusServer",  
+            "base_class": "ServerPluginInterface"  
+        }  
+    ]  
+}

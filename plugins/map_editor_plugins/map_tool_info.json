@@ -1,0 +1,9 @@
+{
+    "library" : "map_tool",
+    "contents" : [
+        {
+    	    "class": "map_tool::MapTool",
+		    "base_class": "map_editor::MapToolBase"
+        }
+    ]
+}

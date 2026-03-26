@@ -1,0 +1,9 @@
+{
+    "library" : "configurator",
+    "contents" : [
+        {
+    	    "class": "config::client::Configurator",
+		    "base_class": "PanelPluginInterface"
+        }
+    ]
+}

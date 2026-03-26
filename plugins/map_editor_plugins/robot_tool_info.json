@@ -1,0 +1,13 @@
+{  
+    "library" : "robot_tool",  
+    "contents" : [  
+        {  
+            "class": "robot_tool::RobotTool",  
+            "base_class": "map_editor::MapToolBase"  
+        },  
+        {  
+            "class": "robot_tool::FollowRobotPos",  
+            "base_class": "map_editor::ViewControllerBase"  
+        }  
+    ]  
+}

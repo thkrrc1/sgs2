@@ -1,0 +1,9 @@
+{
+    "library" : "mover_controller",
+    "contents" : [
+        {
+    	    "class": "subpanel_plugins::MoverController",
+		    "base_class": "SubPanelPluginInterface"
+        }
+    ]
+}

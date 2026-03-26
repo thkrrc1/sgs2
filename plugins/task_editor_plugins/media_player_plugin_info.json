@@ -1,0 +1,9 @@
+{
+    "library" : "media_player_plugin",
+    "contents" : [
+        {
+            "class": "MediaPlayerPlugin",
+            "base_class": "FunctionPluginInterface"
+        }
+    ]
+}

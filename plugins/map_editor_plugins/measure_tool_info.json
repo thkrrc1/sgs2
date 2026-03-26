@@ -1,0 +1,9 @@
+{
+    "library" : "measure_tool",
+    "contents" : [
+        {
+    	    "class": "measure_tool::MeasureTool",
+		    "base_class": "map_editor::MapToolBase"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "label": "サンプルタブ",
+    "model": 2,
+    "contents": [
+        {
+            "label": "要素追加可能リスト",
+            "offset": "0x000",
+            "type": "list",
+            "addable": true,
+            "invalidaxes":[2,3],
+            "rows": 5,
+            "cols": [
+                {
+                    "label": "チェックボックス",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "label": "スピンボックス",
+                    "type": "spin",
+                    "min": 1,
+                    "max": 254,
+                    "byte": 1
+                }
+            ]
+        }
+    ]
+}

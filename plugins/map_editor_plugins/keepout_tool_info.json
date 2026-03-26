@@ -1,0 +1,9 @@
+{
+    "library" : "keepout_tool",
+    "contents" : [
+        {
+    	    "class": "keepout_tool::KeepoutTool",
+		    "base_class": "map_editor::MapToolBase"
+        }
+    ]
+}

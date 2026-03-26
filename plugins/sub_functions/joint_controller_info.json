@@ -1,0 +1,9 @@
+{
+    "library" : "joint_controller",
+    "contents" : [
+        {
+    	    "class": "subpanel_plugins::JointController",
+		    "base_class": "SubPanelPluginInterface"
+        }
+    ]
+}

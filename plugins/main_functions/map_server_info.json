@@ -1,0 +1,9 @@
+{
+    "library" : "map_server",
+    "contents" : [
+        {
+    	    "class": "map_editor::MapServer",
+		    "base_class": "ServerPluginInterface"
+        }
+    ]
+}

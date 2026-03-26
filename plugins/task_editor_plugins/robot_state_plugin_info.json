@@ -1,0 +1,9 @@
+{
+    "library" : "robot_state_plugin",
+    "contents" : [
+        {
+            "class": "RobotStatePlugin",
+            "base_class": "FunctionPluginInterface"
+        }
+    ]
+}

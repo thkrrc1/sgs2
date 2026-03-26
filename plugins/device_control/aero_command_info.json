@@ -1,0 +1,9 @@
+{
+    "library" : "aero_command",
+    "contents" : [
+        {
+    	    "class": "aero_command::ServoCommand",
+		    "base_class": "DevctrlPluginInterface"
+        }
+    ]
+}

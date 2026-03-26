@@ -1,0 +1,9 @@
+{
+    "library" : "marker_detection_plugin",
+    "contents" : [
+        {
+    	    "class": "MarkerDetection",
+		    "base_class": "FunctionPluginInterface"
+        }
+    ]
+}

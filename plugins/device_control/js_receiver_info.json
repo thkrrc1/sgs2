@@ -1,0 +1,9 @@
+{
+    "library" : "js_receiver",
+    "contents" : [
+        {
+    	    "class": "js_receiver::JointStateReceiver",
+		    "base_class": "DevctrlPluginInterface"
+        }
+    ]
+}

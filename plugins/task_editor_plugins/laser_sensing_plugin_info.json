@@ -1,0 +1,9 @@
+{
+    "library" : "laser_sensing_plugin",
+    "contents" : [
+        {
+            "class": "LaserSensing",
+            "base_class": "FunctionPluginInterface"
+        }
+    ]
+}

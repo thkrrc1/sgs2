@@ -1,0 +1,490 @@
+{
+    "topic": "/status/ms_status/2",
+    "msinfo_topic": "/status/ms_info/2",
+    "label": "MS ID2",
+    "layout": "grid",
+    "contents": [
+        {
+            "label": "Voltage/Power",
+            "position": {
+                "row": 0,
+                "col": 0
+            },
+            "type": "group",
+            "color": "#D8737F", 
+            "layout": "grid",
+            "contents": [
+                {
+                    "label": "Voltage",
+                    "mononly":false,
+                    "position": {
+                        "row": 0,
+                        "col": 0
+                    },
+                    "type": "calc",
+                    "data": [
+                        {
+                            "type": "int",
+                            "offset": 104,
+                            "byteswap": true,
+                            "size": 16
+                        }
+                    ],
+                    "formula": "data0/1000.0"
+                },
+                {
+                    "label": "Power",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 0
+                    },
+                    "type": "calc",
+                    "data": [
+                        {
+                            "type": "int",
+                            "offset": 104,
+                            "byteswap": true,
+                            "size": 16
+                        },
+                        {
+                            "type": "int",
+                            "offset": 120,
+                            "byteswap": true,
+                            "size": 16
+                        },
+                        {
+                            "type": "int",
+                            "offset": 136,
+                            "byteswap": true,
+                            "size": 16
+                        },
+                        {
+                            "type": "int",
+                            "offset": 152,
+                            "byteswap": true,
+                            "size": 16
+                        },
+                        {
+                            "type": "int",
+                            "offset": 168,
+                            "byteswap": true,
+                            "size": 16
+                        }
+                    ],
+                    "formula": "data0*(data1+data2+data3+data4)/1000000.0"
+                }
+            ]
+        },
+        {
+            "label": "RobotInfo Status",
+            "position": {
+                "row": 0,
+                "col": 1,
+                "rows": 2
+            },
+            "type": "group",
+            "color": "#AB6C82", 
+            "layout": "grid",
+            "contents": [
+                {
+                    "label": "System",
+                    "mononly":true,
+                    "position": {
+                        "row": 0,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 23,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "Power Supply",
+                    "mononly":true,
+                    "position": {
+                        "row": 0,
+                        "col": 1
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 22,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "Constant Power",
+                    "mononly":true,
+                    "position": {
+                        "row": 0,
+                        "col": 2
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 21,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "SSR",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 20,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "Servo",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 1
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 19,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "Overcurrent1",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 2
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 18,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "Overcurrent2",
+                    "mononly":true,
+                    "position": {
+                        "row": 3,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 17,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "AeroCom",
+                    "mononly":true,
+                    "position": {
+                        "row": 3,
+                        "col": 1
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 15,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "Protect(Soft)",
+                    "position": {
+                        "row": 4,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 11,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "Protect(Hard)",
+                    "position": {
+                        "row": 4,
+                        "col": 1
+                    },
+						    "type": "calc_lamp",
+						    "data": [
+								  {
+						          "type": "int",
+						          "offset": 10,
+									  "size": 1
+						          },
+								  {
+								     "type": "int",
+								     "offset": 12,
+								     "size": 1
+								  },
+							      {
+							        "type": "int",
+							        "offset": 13,
+							        "size": 1
+							      }
+							    ],
+							    "formula": "data0 * data1 * data2" 
+				},
+                {
+                    "label": "Emergency(Soft)",
+                    "position": {
+                        "row": 4,
+                        "col": 2
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 9,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "Emergency(Hard)",
+                    "position": {
+                        "row": 5,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 8,
+                        "size": 1
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Security",
+            "position": {
+                "row": 0,
+                "col": 2
+            },
+            "type": "group",
+            "color": "#685D79",
+            "layout": "grid",
+            "contents": [
+                {
+                    "label": "端末接続",
+                    "mononly":true,
+                    "position": {
+                        "row": 0,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 7,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "MSSerial",
+                    "mononly":true,
+                    "position": {
+                        "row": 0,
+                        "col": 1
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 6,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "認証Cmd1",
+                    "mononly":true,
+                    "position": {
+                        "row": 0,
+                        "col": 2
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 5,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "認証Cmd2",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 4,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "CAN Port",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 1
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 3,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "Task Cord",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 2
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 2,
+                        "size": 1
+                    }
+                }
+            ]
+        },
+        {
+            "label": "MS-MS Connection",
+            "position": {
+                "row": 1,
+                "col": 2
+            },
+            "type": "group",
+            "color":"#475C7A",
+            "layout": "grid",
+            "contents": [
+                {
+                    "label": "システム",
+                    "mononly":true,
+                    "position": {
+                        "row": 0,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 31,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "MSID1",
+                    "mononly":true,
+                    "position": {
+                        "row": 0,
+                        "col": 1
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 30,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "MSID2",
+                    "mononly":true,
+                    "position": {
+                        "row": 0,
+                        "col": 2
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 29,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "MSID3",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 28,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "MSID4",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 1
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 27,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "MSID5",
+                    "mononly":true,
+                    "position": {
+                        "row": 1,
+                        "col": 2
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 26,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "MSID6",
+                    "mononly":true,
+                    "position": {
+                        "row": 3,
+                        "col": 0
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 25,
+                        "size": 1
+                    }
+                },
+                {
+                    "label": "MSID7",
+                    "mononly":true,
+                    "position": {
+                        "row": 3,
+                        "col": 1
+                    },
+                    "type": "lamp",
+                    "data": {
+                        "type": "int",
+                        "offset": 24,
+                        "size": 1
+                    }
+                }
+            ]
+        }
+    ]
+}

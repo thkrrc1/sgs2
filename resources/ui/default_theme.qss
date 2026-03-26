@@ -1,0 +1,40 @@
+/* ヘルプとかの部分 */
+MainWindow > QMenuBar{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* mainwindowのtoolbar */
+MainWindow > QToolBar{
+    background-color: #dddddd;
+    color: #555555;
+}
+
+MainWindow > QToolBar > QLabel#title{
+     color: #008eaa;
+     font-family: Bauhaus 93;
+     font-size: 20pt;
+}
+
+MainWindow > QTabBar{
+   background-color: #008eaa;
+   qproperty-drawBase:0;
+}
+
+/* mainwindowのサイドタブ */
+MainWindow > QTabBar::tab{
+     background-color: #008eaa;
+     color: #ffffff;
+}
+
+/* mainwindowのサイドタブ */
+MainWindow > QTabBar::tab:selected{
+     background-color: #99bbbbbb;
+     color: #ffffff;
+}
+
+MapEditor2DView,RoomEditTool { 
+    /* WallColor FieldColor CollisionColor InflationColor1 InflationColor2 */
+    qproperty-colorScheme : "#FF008eaa #FFCCCCFF #FFD8737F #FFCCCCFF #FFFFCCCC";
+}
+

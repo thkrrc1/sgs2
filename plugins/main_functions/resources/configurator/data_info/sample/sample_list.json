@@ -1,0 +1,32 @@
+{
+    "label": "サンプルタブ",
+    "model": 2,
+    "contents": [
+        {
+            "label": "リスト",
+            "offset": "0x000",
+            "type": "list",
+            "rows": 5,
+            "invalidaxes":[2,3],
+            "rowlabels": [
+                "1行目",
+                "4行目",
+                "5行目"
+            ],
+            "cols": [
+                {
+                    "label": "チェックボックス",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "label": "スピンボックス",
+                    "type": "spin",
+                    "min": 1,
+                    "max": 254,
+                    "byte": 1
+                }
+            ]
+        }
+    ]
+}

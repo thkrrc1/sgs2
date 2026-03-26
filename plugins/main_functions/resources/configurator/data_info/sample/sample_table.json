@@ -1,0 +1,42 @@
+{
+    "label": "サンプルタブ",
+    "model": 2,
+    "contents": [
+        {
+            "label": "テーブル",
+            "type": "table",
+            "rows": 5,
+            "invalidaxes": [
+                3,
+                4
+            ],
+            "rowlabels": [
+                "データ1",
+                "データ2",
+                "データ5"
+            ],
+            "cols": [
+                {
+                    "label": "コンボボックス",
+                    "type": "dropdown",
+                    "items": [
+                        "",
+                        "アイテム1",
+                        "アイテム2",
+                        "アイテム3"
+                    ],
+                    "offset": "0x0000",
+                    "byte": 1
+                },
+                {
+                    "label": "スピンボックス",
+                    "type": "spin",
+                    "min": 1,
+                    "max": 254,
+                    "offset": "0x005",
+                    "byte": 1
+                }
+            ]
+        }
+    ]
+}

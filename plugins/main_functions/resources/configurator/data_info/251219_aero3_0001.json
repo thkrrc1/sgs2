@@ -1,0 +1,1064 @@
+{
+    "label": "",
+    "model": 1,
+    "endian": "little",
+    "contents": [
+        {
+            "label": "System設定",
+            "type": "group",
+            "rows": [
+                {
+                    "offset": "0x01",
+                    "label": "MS ID設定",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 7,
+                    "byte": 1
+                },
+                {
+                    "offset": "0x02",
+                    "label": "SMS ID設定",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 126,
+                    "byte": 1
+                },
+                {
+                    "offset": "0x04",
+                    "label": "プロトコル設定",
+                    "type": "dropdown",
+                    "items": [
+                        "Aero3",
+                        "Aero4"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x21",
+                    "label": "SEED4プロトコル拡張データ設定",
+                    "type": "dropdown",
+                    "items": [
+                        "",
+                        "新プロトコル　拡張データあり",
+                        "新プロトコル　拡張データなし",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "旧プロトコル"
+                    ],
+                    "byte": 1
+                },    
+                {
+                    "offset": "0x05",
+                    "label": "クラウドの使用",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x06",
+                    "label": "タブレット通信MS設定",
+                    "type": "spin",
+                    "min": 1,
+                    "max": 7,
+                    "byte": 1
+                }
+            ]
+        },
+        {
+            "label": "PDB入力設定（各スイッチの有効設定）",
+            "type": "group",
+            "rows": [
+                {
+                    "offset": "0x830",
+                    "label": "他MSからの非常停止連動入力 有効（STPCN-IN)",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x840",
+                    "label": "起動スイッチ 有効（SW1)",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x841",
+                    "label": "起動スイッチ無効時の起動方法",
+                    "type": "dropdown",
+                    "items": [
+			"他のMSの原点復帰完了したら",
+			"他のMSの起動スイッチ押されたら",
+			"即時"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x850",
+                    "label": "保護停止スイッチ 有効（SW2)",
+                    "type": "check",
+                    "byte": 1
+                }
+            ]
+        },
+        {
+            "label": "PDB入力設定（IN1-IN4 の機能設定）",
+            "offset": "0x0880",
+            "type": "list",
+            "rows": 5,
+            "invalidaxes":[5],
+            "rowlabels": [
+                "IN1",
+                "IN2",
+                "IN3",
+                "IN4"
+            ],
+            "cols": [
+                {
+                    "type": "dummy",
+                    "byte": 1
+                },
+                {
+                
+                    "label": "ONの論理",
+                     "type": "dropdown",
+                    "items": [
+                        "Low",
+                        "High"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "type": "dummy",
+                    "byte": 5
+                },
+                {
+                    "label": "実行内容",
+                    "type": "dropdown",
+                    "items": [
+                        "無効",
+                        "非常停止",
+                        "保護停止",
+                        "スクリプト実行",
+                        "スクリプト+保護停止",
+                        "起動"                                        
+                    ],
+                    "byte": 1
+                },
+                {
+                    "type": "dummy",
+                    "byte": 8
+                }
+            ]
+        },
+        {
+            "label": "PDB入力設定（IN1-IN4 スクリプト実行時のスクリプトNo.設定）",
+            "offset": "0x0980",
+            "type": "list",
+            "rows": 5,
+            "invalidaxes":[5],
+            "rowlabels": [
+                "IN1 スクリプト",
+                "IN2 スクリプト",
+                "IN3 スクリプト",
+                "IN4 スクリプト"
+            ],
+            "cols": [
+		 {
+                    "label": "CAN1_ID_1",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_2",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_3",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_4",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_5",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_6",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_7",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_8",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_9",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_10",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_11",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_12",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_13",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_14",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "CAN2_ID_1",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_2",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_3",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_4",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_5",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_6",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_7",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_8",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_9",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_10",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_11",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_12",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_13",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_14",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 8,
+                    "byte": 1
+                 },
+
+                {
+                    "type": "dummy",
+                    "byte": 4
+                }
+            ]
+        },
+        {
+            "label": "PDB出力設定（各機能の有効設定）",
+            "type": "group",
+            "rows": [
+                {
+                    "offset": "0x0C01",
+                    "label": "他MSへの非常停止連動出力 有効（STPCN-OUT)",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x0C20",
+                    "label": "DCDC1 起動時出力 有効",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x0C21",
+                    "label": "DCDC1 遠隔制御 有効",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x0C30",
+                    "label": "DCDC2 起動時出力 有効",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x0C31",
+                    "label": "DCDC2 遠隔制御 有効",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x0C40",
+                    "label": "VCC-OUT 起動時出力 有効",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x0C41",
+                    "label": "VCC-OUT 遠隔制御 有効",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x0C50",
+                    "label": "VCC-OUT' 起動時出力 有効",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0xC51",
+                    "label": "VCC-OUT' 遠隔制御 有効",
+                    "type": "check",
+                    "byte": 1
+                }
+            ]
+        },
+        {
+            "label": "バッテリエラー閾値電圧設定",
+            "type": "group",
+            "rows": [
+                {
+                    "offset": "0xD80",
+                    "label": "×0.1V　バッテリWARNINGになる電圧設定（Mover黄色LED）",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 300,
+                    "byte": 2
+                },
+                {
+                    "offset": "0xD82",
+                    "label": "×0.1V　バッテリERRORになる電圧電圧（強制停止+Mover赤色LED）",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 255,
+                    "byte": 2
+                }
+            ]
+        },
+        {
+            "label": "停止制御設定",
+            "type": "group",
+            "rows": [
+                {
+                    "offset": "0xE00",
+                    "label": "ソフトによる非常停止を行う",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0xE02",
+                    "label": "ソフトによる保護停止を行う",
+                    "type": "check",
+                    "byte": 1
+                }
+            ]
+        },
+        {
+            "label": "保護停止設定",
+            "type": "group",
+            "rows": [
+                {
+                    "offset": "0xE10",
+                    "label": "保護停止時 サーボOFFにする",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0xE20",
+                    "label": "ハードによる保護停止状態をソフトで解除する(SW1外部コマンドによる制御有効)",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0xE21",
+                    "label": "バンパ押されている間サーボOFFにする",
+                    "type": "check",
+                    "byte": 1
+                }
+            ]
+        },
+        {
+            "label": "保護停止　Driver基板入力設定（I/O_port番号を指定　0は無効)",
+            "offset": "0x0E40",
+            "type": "list",
+            "rows": 2,
+            "invalidaxes":[2],
+            "rowlabels": [
+                "I/0"
+            ],
+            "cols": [
+		 {
+                    "label": "CAN1_ID_1",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_2",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_3",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_4",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_5",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_6",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_7",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_8",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_9",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_10",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_11",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_12",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_13",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_14",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "CAN2_ID_1",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_2",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_3",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_4",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_5",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_6",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_7",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_8",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_9",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_10",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+	         {
+                    "label": "ID_11",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_12",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_13",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+		 {
+                    "label": "ID_14",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 4,
+                    "byte": 1
+                 },
+
+                {
+                    "type": "dummy",
+                    "byte": 4
+                }
+            ]
+        },
+        {
+            "label": "脱調検出時設定",
+            "type": "group",
+            "rows": [
+                {
+                    "offset": "0xE31",
+                    "label": "脱調検出時保護停止する",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x0E32",
+                    "label": "脱調フラグをクリアする",
+                    "type": "check",
+                    "byte": 1
+                }
+            ]
+        },
+        {
+            "label": "その他設定",
+            "type": "group",
+            "rows": [
+                {
+                    "offset": "0x801",
+                    "label": "PDB不使用時に非常停止外部入力を有効にする",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x80",
+                    "label": "エラー時保護停止しない",
+                    "type": "check",
+                    "byte": 1
+                },
+                {
+                    "offset": "0x81",
+                    "label": "秒　原点復帰待ち時間",
+                    "type": "spin",
+                    "min": 1,
+                    "max": 255,
+                    "byte": 1
+                }
+            ]
+        },        
+        {
+            "label": "Driver設定",
+            "position": {
+                "column": 1
+            },            
+            "type": "table",
+           
+            "rows": 28,
+            "rowlabels": [
+                "CAN1_ID1",
+                "CAN1_ID2",
+                "CAN1_ID3",
+                "CAN1_ID4",
+                "CAN1_ID5",
+                "CAN1_ID6",
+                "CAN1_ID7",
+                "CAN1_ID8",
+                "CAN1_ID9",
+                "CAN1_ID10",
+                "CAN1_ID11",
+                "CAN1_ID12",
+                "CAN1_ID13",
+                "CAN1_ID14",
+                "CAN2_ID1",
+                "CAN2_ID2",
+                "CAN2_ID3",
+                "CAN2_ID4",
+                "CAN2_ID5",
+                "CAN2_ID6",
+                "CAN2_ID7",
+                "CAN2_ID8",
+                "CAN2_ID9",
+                "CAN2_ID10",
+                "CAN2_ID11",
+                "CAN2_ID12",
+                "CAN2_ID13",                              
+                "CAN2_ID14"
+            ],
+            "cols": [
+                {
+                    "offset": "0x300",
+                    "label": "Driver温度リミット[℃]",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 255,
+                    "byte": 1
+                },
+                {
+                    "offset": "0x320",
+                    "label": "モーター温度リミット[℃]",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 255,
+                    "byte": 1
+                },
+                {
+                    "offset": "0x340",
+                    "label": "電流リミットCW",
+                    "type": "spin",
+                    "min": 1,
+                    "max": 255,
+                    "byte": 1
+                },
+                {
+                    "offset": "0x360",
+                    "label": "電流リミットCCW",
+                    "type": "spin",
+                    "min": 1,
+                    "max": 255,
+                    "byte": 1
+                },
+                {
+                    "offset": "0x380",
+                    "label": "速度リミットCW",
+                    "type": "spin",
+                    "min": 1,
+                    "max": 65535,
+                    "byte": 2
+                },
+                {
+                    "offset": "0x3C0",
+                    "label": "速度リミットCCW",
+                    "type": "spin",
+                    "min": 1,
+                    "max": 65535,
+                    "byte": 2
+                }
+            ]
+        },
+        {
+            "label": "Driver IO-0設定",
+            "position": {
+                "column": 1
+            },
+            "type": "table",
+            "addable": true,
+            "axislabel": "MC ID",
+            "invalidaxes": [          
+            ],
+            "rows": 28,
+            "cols": [
+                {
+                    "offset": "0x400",
+                    "label": "IO設定",
+                    "type": "dropdown",
+                    "items": [
+                        "標準入力",
+                        "プルダウン入力",
+                        "プルアップ入力",
+                        "出力（外部変更可）",
+                        "出力（外部変更不可）",
+                        "AD入力",
+                        "PWMタイマー出力",
+                        "LEDコマンド出力",
+                        "UART ABS ENC",
+                        "UART位置出力",
+                        "TOF6180X"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x420",
+                    "label": "分類",
+                    "type": "dropdown",
+                    "items": [
+                        "",
+                        "ファン",
+                        "センサ",
+                        "LED",
+                        "other"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x440",
+                    "label": "動作しきい値",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 255,
+                    "byte": 1
+                }
+            ]
+        },
+        {
+            "label": "Driver IO-1設定",
+            "position": {
+                "column": 1
+            },
+            "type": "table",
+            "addable": true,
+            "axislabel": "MC ID",
+            "invalidaxes": [          
+            ],
+            "rows": 28,
+            "cols": [
+                {
+                    "offset": "0x460",
+                    "label": "IO設定",
+                    "type": "dropdown",
+                    "items": [
+                        "標準入力",
+                        "プルダウン入力",
+                        "プルアップ入力",
+                        "出力（外部変更可）",
+                        "出力（外部変更不可）",
+                        "AD入力",
+                        "PWMタイマー出力",
+                        "LEDコマンド出力",
+                        "UART ABS ENC",
+                        "UART位置出力",
+                        "TOF6180X"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x480",
+                    "label": "分類",
+                    "type": "dropdown",
+                    "items": [
+                        "",
+                        "ファン",
+                        "センサ",
+                        "LED",
+                        "other"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x4A0",
+                    "label": "動作しきい値",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 255,
+                    "byte": 1
+                }
+            ]
+        },
+        {
+            "label": "Driver IO-2設定",
+            "position": {
+                "column": 1
+            },
+            "type": "table",
+            "addable": true,
+            "axislabel": "MC ID",
+            "invalidaxes": [          
+            ],
+            "rows": 28,
+            "cols": [
+                {
+                    "offset": "0x4C0",
+                    "label": "IO設定",
+                    "type": "dropdown",
+                    "items": [
+                        "標準入力",
+                        "プルダウン入力",
+                        "プルアップ入力",
+                        "出力（外部変更可）",
+                        "出力（外部変更不可）",
+                        "AD入力",
+                        "PWMタイマー出力",
+                        "LEDコマンド出力",
+                        "UART ABS ENC",
+                        "UART位置出力",
+                        "TOF6180X"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x4E0",
+                    "label": "分類",
+                    "type": "dropdown",
+                    "items": [
+                        "",
+                        "ファン",
+                        "センサ",
+                        "LED",
+                        "other"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x500",
+                    "label": "動作しきい値",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 255,
+                    "byte": 1
+                }
+            ]
+        },
+        {
+            "label": "Driver IO-3設定",
+            "position": {
+                "column": 1
+            },
+            "type": "table",
+            "addable": true,
+            "axislabel": "MC ID",
+            "invalidaxes": [          
+            ],
+            "rows": 28,
+            "cols": [
+                {
+                    "offset": "0x520",
+                    "label": "IO設定",
+                    "type": "dropdown",
+                    "items": [
+                        "標準入力",
+                        "プルダウン入力",
+                        "プルアップ入力",
+                        "出力（外部変更可）",
+                        "出力（外部変更不可）",
+                        "AD入力",
+                        "PWMタイマー出力",
+                        "LEDコマンド出力",
+                        "UART ABS ENC",
+                        "UART位置出力",
+                        "TOF6180X"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x540",
+                    "label": "分類",
+                    "type": "dropdown",
+                    "items": [
+                        "",
+                        "ファン",
+                        "センサ",
+                        "LED",
+                        "other"
+                    ],
+                    "byte": 1
+                },
+                {
+                    "offset": "0x560",
+                    "label": "動作しきい値",
+                    "type": "spin",
+                    "min": 0,
+                    "max": 255,
+                    "byte": 1
+                }
+            ]
+        }
+    ]
+}

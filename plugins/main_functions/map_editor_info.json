@@ -1,0 +1,9 @@
+{
+    "library" : "map_editor",
+    "contents" : [
+        {
+    	    "class": "map_editor::MapEditor",
+		    "base_class": "PanelPluginInterface"
+        }
+    ]
+}

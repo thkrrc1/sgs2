@@ -1,0 +1,9 @@
+{
+    "library" : "timer_plugin",
+    "contents" : [
+        {
+    	    "class": "TimerPlugin",
+		    "base_class": "FunctionPluginInterface"
+        }
+    ]
+}

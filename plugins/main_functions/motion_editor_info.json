@@ -1,0 +1,9 @@
+{
+    "library" : "motion_editor",
+    "contents" : [
+        {
+    	    "class": "motion_editor::MotionEditor",
+		    "base_class": "PanelPluginInterface"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "library" : "mover_command",
+    "contents" : [
+        {
+    	    "class": "mover_command::MoverCommand",
+		    "base_class": "DevctrlPluginInterface"
+        }
+    ]
+}

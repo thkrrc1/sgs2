@@ -1,0 +1,9 @@
+{
+    "library" : "status_monitor",
+    "contents" : [
+        {
+    	    "class": "status_monitor::StatusMonitor",
+		    "base_class": "PanelPluginInterface"
+        }
+    ]
+}

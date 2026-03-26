@@ -1,0 +1,9 @@
+{
+    "library" : "image_viewer",
+    "contents" : [
+        {
+    	    "class": "subpanel_plugins::ImageViewer",
+		    "base_class": "SubPanelPluginInterface"
+        }
+    ]
+}

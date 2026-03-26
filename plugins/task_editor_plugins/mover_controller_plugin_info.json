@@ -1,0 +1,9 @@
+{
+    "library" : "mover_controller_plugin",
+    "contents" : [
+        {
+            "class": "MoverController",
+            "base_class": "FunctionPluginInterface"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "library" : "script_controller_plugin",
+    "contents" : [
+        {
+    	    "class": "ScriptController",
+		    "base_class": "FunctionPluginInterface"
+        }
+    ]
+}

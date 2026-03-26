@@ -1,0 +1,9 @@
+{
+    "library" : "joint_command",
+    "contents" : [
+        {
+    	    "class": "joint_command::JointCommand",
+		    "base_class": "DevctrlPluginInterface"
+        }
+    ]
+}

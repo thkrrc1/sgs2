@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/sgs_main">
+        <file alias="spinner">images/spinner.gif</file>
+        <file alias="splash">images/splash.svg</file>
+        <file alias="icon">images/icon.svg</file>
+        <file alias="connect">images/connect.svg</file>
+        <file alias="disconnect">images/disconnect.svg</file>
+    </qresource>
+</RCC>

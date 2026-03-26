@@ -1,0 +1,9 @@
+{
+    "library" : "body_controller_plugin",
+    "contents" : [
+        {
+    	    "class": "BodyController",
+		    "base_class": "FunctionPluginInterface"
+        }
+    ]
+}

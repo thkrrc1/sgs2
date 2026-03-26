@@ -1,0 +1,9 @@
+{
+    "library" : "log_monitor",
+    "contents" : [
+        {
+    	    "class": "log_monitor::LogMonitor",
+		    "base_class": "PanelPluginInterface"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "label": "サンプルタブ",
+    "model": 2,
+    "contents": [
+        {
+            "type": "image",
+            "file": "./resources/configurator/sample/sample.png"
+        }
+    ]
+}

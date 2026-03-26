@@ -1,0 +1,9 @@
+{
+    "library" : "task_editor",
+    "contents" : [
+        {
+    	    "class": "TaskEditor",
+		    "base_class": "PanelPluginInterface"
+        }
+    ]
+}

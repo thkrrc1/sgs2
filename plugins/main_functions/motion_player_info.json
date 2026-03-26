@@ -1,0 +1,9 @@
+{
+    "library" : "motion_player",
+    "contents" : [
+        {
+    	    "class": "motion_player::MotionPlayer",
+		    "base_class": "ServerPluginInterface"
+        }
+    ]
+}

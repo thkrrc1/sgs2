@@ -1,0 +1,25 @@
+{
+    "library" : "map_objects",
+    "contents" : [
+        {
+    	    "class": "map_objects::Waypoint",
+		    "base_class": "map_editor::MapItemBase"
+        },
+        {
+    	    "class": "map_objects::Map",
+		    "base_class": "map_editor::MapItemBase"
+        },
+        {
+    	    "class": "map_objects::Keepout",
+		    "base_class": "map_editor::MapItemBase"
+        },
+        {
+    	    "class": "map_objects::Object",
+		    "base_class": "map_editor::MapItemBase"
+        },
+        {
+    	    "class": "map_objects::ObjectRuntimePlugin",
+		    "base_class": "map_editor::MapServerPluginBase"
+        }
+    ]
+}

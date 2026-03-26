@@ -1,0 +1,9 @@
+{
+    "library" : "map_changer_plugin",
+    "contents" : [
+        {
+            "class": "MapChangerPlugin",
+            "base_class": "FunctionPluginInterface"
+        }
+    ]
+}

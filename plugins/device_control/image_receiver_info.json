@@ -1,0 +1,9 @@
+{
+    "library" : "image_receiver",
+    "contents" : [
+        {
+    	    "class": "image_receiver::ImageReceiver",
+		    "base_class": "DevctrlPluginInterface"
+        }
+    ]
+}

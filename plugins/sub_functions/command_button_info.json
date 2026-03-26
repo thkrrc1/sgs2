@@ -1,0 +1,9 @@
+{
+    "library" : "command_button",
+    "contents" : [
+        {
+    	    "class": "subpanel_plugins::CommandButton",
+		    "base_class": "SubPanelPluginInterface"
+        }
+    ]
+}
